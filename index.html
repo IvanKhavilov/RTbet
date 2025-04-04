@@ -401,6 +401,15 @@
         text-align: center;
       }
       @media (max-width: 768px) {
+        .main {
+          background-size: cover;
+          background-image: url('images/main-img-320.webp');
+          background-size: contain;
+          background-position: top;
+        }
+        .main__content {
+          padding-left: 0;
+        }
         .popular {
           grid-template-columns: repeat(3, 1fr);
         }
@@ -409,9 +418,6 @@
         }
       }
       @media (max-width: 465px) {
-        .content {
-          padding-bottom: 0;
-        }
         .content__inner h1 {
           font-size: 30px;
           margin-bottom: 20px;
@@ -435,9 +441,6 @@
         }
         .main {
           padding: 200px 8px 10px;
-          background-image: url('images/main-img-320.webp');
-          background-size: contain;
-          background-position: top;
           position: relative;
           margin-bottom: 16px;
         }
@@ -448,10 +451,9 @@
           left: 0;
           background: linear-gradient(#0f094000 4.97%, #0f0a3c87 14.41%, #0f0b3b 30.21%, #100e26 83.83%, #111 96.63%);
           width: 100%;
-          height: 200px;
+          height: 220px;
         }
         .main__content {
-          padding-left: 0;
           position: relative;
           z-index: 2;
         }
