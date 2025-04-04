@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="hu-HU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="RTbet - Your premier choice for online casino gaming and sports betting. Experience top slots, table games, and a diverse range of betting options."
+    />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <title>RTbet: A Top Class Online Casino and Sportsbook</title>
+    <style type="text/css">
+      :root {
+        --bg-color: #111;
+      }
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: var(--bg-color);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+          'Helvetica Neue', sans-serif;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      p {
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        vertical-align: sub;
+      }
+      .content__inner h1 {
+        font-size: 2.4375em;
+        margin-bottom: 16px;
+      }
+      .content__inner h2 {
+        text-transform: uppercase;
+        font-size: 1.9375em;
+        margin: 16px 0;
+      }
+      .content__inner p + p {
+        margin-top: 16px;
+      }
+      .content {
+        padding-bottom: 50px;
+      }
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .main {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .header {
+        position: sticky;
+        top: 0;
+        background-color: var(--bg-color);
+        z-index: 10;
+        border-bottom: 1px solid #2d2d2d;
+      }
+      .header__inner {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px 10px 90px;
+        position: relative;
+      }
+      .menu-burger__input,
+      .menu-burger__label {
+        display: none;
+      }
+      .btn-box--mobile {
+        display: none;
+      }
+      .menu__list {
+        padding: 0 0 0 10px;
+        margin: 0;
+        list-style: none;
+      }
+      .menu,
+      .menu-burger__label span {
+        left: 0;
+      }
+      .menu-burger__label {
+        cursor: pointer;
+      }
+      .menu {
+        position: absolute;
+        top: 0px;
+        padding: 80px 8px 16px 8px;
+        width: 280px;
+        min-height: fit-content;
+        height: 100%;
+        overflow: auto;
+        z-index: 10;
+        transform: translateX(-200%);
+        transition: all 0.5s;
+        background: linear-gradient(#3d0744 1.76%, #1b0055 94.71%);
+      }
+      .menu::before {
+        content: '';
+        background-image: url('images/menu-lines.webp');
+        background-position: 0 0;
+        opacity: 0.8;
+        mix-blend-mode: overlay;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        inset: 0;
+        inset-block-start: 4px;
+        z-index: -1;
+      }
+      .menu-burger__label span,
+      .menu-burger__label::after,
+      .menu-burger__label::before {
+        height: 2px;
+        border-radius: 2px;
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+      }
+      .menu-burger__label,
+      .menu-burger__label span {
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+      }
+      .menu-burger__input {
+        position: relative;
+        opacity: 0;
+      }
+      .menu-burger__label {
+        position: absolute;
+        left: 20px;
+        top: 29px;
+        width: 24px;
+        height: 16px;
+        z-index: 11;
+      }
+      .menu-burger__label::after,
+      .menu-burger__label::before,
+      .menu-burger__label span {
+        content: '';
+        right: 0;
+        transition: transform 0.3s;
+      }
+      .menu-burger__label::after {
+        top: 0;
+      }
+      .menu-burger__label::before {
+        bottom: 0;
+      }
+      .menu-burger__input:checked ~ .menu-burger__label span {
+        opacity: 0;
+      }
+      .menu-burger__input:checked ~ .menu-burger__label::before {
+        background-color: #b5e800;
+        bottom: 7px;
+        transform: rotate(-45deg);
+      }
+      .menu-burger__input:checked ~ .menu-burger__label::after {
+        background-color: #b5e800;
+        top: 7px;
+        transform: rotate(45deg);
+      }
+      .menu-burger__input:checked + .menu-burger__label + .menu {
+        transform: translateX(0);
+      }
+      .menu__item {
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        transition: all 0.4s;
+      }
+      .menu__item svg {
+        margin-right: 10px;
+      }
+      .menu__item:hover svg {
+        fill: #b5e800;
+      }
+      .menu__link {
+        font-size: 14px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .menu__link:hover {
+        color: #b5e800;
+      }
+      .logo {
+        z-index: 11;
+      }
+      .header__btn-box {
+        margin-left: auto;
+      }
+      .btn__link {
+        display: inline-block;
+        padding-inline: 24px;
+        padding-block: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+        border: 1px solid #4b4b4b;
+        transition: all 0.5s;
+        background-color: transparent;
+      }
+      .btn__link-accent {
+        margin-right: 5px;
+        text-shadow: 1px 1px #09104166;
+        background: linear-gradient(360deg, #097500 -5.83%, #77d400 100%);
+        border-image: linear-gradient(90deg, #a3d000 24%, #fff 48% 50%, #fff 52%, #a3d000 82%) 8 / 2px;
+        position: relative;
+        box-shadow: 4px 4px #0006, inset 0 1px #ffffff40;
+      }
+      .btn__link-accent::after {
+        content: '';
+        background: linear-gradient(#fff3 0%, #ffffff14 100%);
+        width: calc(100% - 4px);
+        height: 50%;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+      }
+      .btn__link-accent:hover {
+        background: linear-gradient(359.98deg, #097500 -19.97%, #c7ff00 99.99%);
+        box-shadow: 4px 4px #0000001f, inset 0 1px #ffffff40;
+      }
+      .registration:hover {
+        color: #2d2d2d;
+        border-color: #fff;
+        background-color: #fff;
+      }
+      .main {
+        padding: 100px 0;
+        background-image: url('images/main-img.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+      }
+      .main__content {
+        padding-left: 50px;
+        max-width: 525px;
+        width: 100%;
+        text-align: center;
+      }
+      .main__text {
+        display: inline-block;
+        color: #fec808;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: #3b04da99;
+        margin-bottom: 15px;
+        padding: 8px 12px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21px;
+      }
+      .main__text-title {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+      .main__btn {
+        margin-top: 20px;
+        width: 324px;
+        height: 70px;
+        font-size: 28px;
+        padding-inline: 32px;
+        font-weight: 700;
+        padding-block: 15px;
+        text-align: center;
+      }
+      .main__btn span {
+        display: inline-block;
+        animation: 1.5s ease-in-out infinite alternate scalingCta;
+      }
+      .popular__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .more-games {
+        color: #b5e800;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        display: inline-block;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        text-transform: uppercase;
+      }
+      .more-games:hover {
+        color: #56c200;
+      }
+      .popular {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 25px 15px;
+        margin-bottom: 20px;
+      }
+      .popular__item {
+        cursor: pointer;
+        background-image: url('images/casinotopback.webp');
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+      .popular__link::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        background: linear-gradient(179.45deg, #57008d00 36.86%, #311a8d 85.54%);
+        width: 100%;
+        height: 100%;
+      }
+      .popular__link {
+        display: inline-block;
+        transform: translateY(-10px);
+        position: relative;
+      }
+      .popular__item span {
+        display: block;
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 3;
+        text-transform: uppercase;
+        width: calc(100% - 10px);
+        color: #fff;
+        background: #0d0c38;
+        border: 2px solid #ffffff24;
+        padding: 7px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      .footer {
+        padding: 50px 0;
+        background-color: #2d2d2d;
+        background-image: url('images/dots-pattern.webp');
+        background-repeat: repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      .footer__nav {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        padding: 15px 0;
+      }
+      .footer__nav-logo {
+        width: 150px;
+        padding-right: 0;
+      }
+      .footer__list {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        max-width: 100%;
+        width: 100%;
+      }
+      .footer__list-item {
+        color: #d0d2d7;
+      }
+      .footer__text {
+        color: #a2a5af;
+        font-size: 14px;
+        padding-top: 20px;
+        text-align: center;
+      }
+      @media (max-width: 768px) {
+        .popular {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .footer__nav {
+          grid-template-columns: 100%;
+        }
+      }
+      @media (max-width: 465px) {
+        .content {
+          padding-bottom: 0;
+        }
+        .content__inner h1 {
+          font-size: 30px;
+          margin-bottom: 20px;
+        }
+        .content__inner h2 {
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+        .header__inner {
+          padding-left: 40px;
+        }
+        .logo {
+          width: 80px;
+        }
+        .menu-burger__label {
+          left: 8px;
+          top: 25px;
+        }
+        .menu {
+          width: 100%;
+        }
+        .main {
+          padding: 200px 8px 10px;
+          background-image: url('images/main-img-320.webp');
+          background-size: contain;
+          background-position: top;
+          position: relative;
+          margin-bottom: 16px;
+        }
+        .main::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background: linear-gradient(#0f094000 4.97%, #0f0a3c87 14.41%, #0f0b3b 30.21%, #100e26 83.83%, #111 96.63%);
+          width: 100%;
+          height: 200px;
+        }
+        .main__content {
+          padding-left: 0;
+          position: relative;
+          z-index: 2;
+        }
+        .main__text {
+          font-size: 14px;
+          background-color: #3b04da;
+        }
+        .main__text-title {
+          font-size: 32px;
+          font-weight: 600;
+        }
+        .main__btn {
+          padding-block: 7px;
+          width: 310px;
+          height: fit-content;
+          font-size: 22px;
+        }
+        .popular {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .more-games {
+          width: 150px;
+          padding: 11px 15px;
+          text-align: center;
+        }
+      }
+      @media (max-width: 407px) {
+        .main {
+          padding-top: 160px;
+        }
+        .log-in {
+          margin-left: 0;
+        }
+        .btn__link {
+          padding-inline: 12px;
+        }
+      }
+      @media (max-width: 375px) {
+        .main::after {
+          height: 310px;
+        }
+        .btn__link {
+          font-size: 11px;
+        }
+        .main__btn {
+          font-size: 18px;
+          width: 280px;
+        }
+      }
+      @keyframes scalingCta {
+        0% {
+          scale: 1;
+        }
+        75% {
+          scale: 1;
+        }
+        100% {
+          scale: 1.1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <input class="menu-burger__input" type="checkbox" id="burger" />
+        <label class="menu-burger__label" for="burger"><span></span></label>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <svg width="20" height="20" fill="#fff">
+                <use xlink:href="images/sprite.svg#casino"></use>
+              </svg>
+              <a class="menu__link" href="go">Casino</a>
+            </li>
+            <li class="menu__item">
+              <svg width="20" height="20" fill="#fff">
+                <use xlink:href="images/sprite.svg#live-casino"></use>
+              </svg>
+              <a class="menu__link" href="go">Live Casino</a>
+            </li>
+            <li class="menu__item">
+              <svg width="20" height="20" fill="#fff">
+                <use xlink:href="images/sprite.svg#jackpot"></use>
+              </svg>
+              <a class="menu__link" href="go">Jackpots</a>
+            </li>
+            <li class="menu__item">
+              <svg width="20" height="20" fill="#fff">
+                <use xlink:href="images/sprite.svg#sportsbook"></use>
+              </svg>
+              <a class="menu__link" href="go">Sportsbook</a>
+            </li>
+            <li class="menu__item">
+              <svg width="20" height="20" fill="#fff">
+                <use xlink:href="images/sprite.svg#live-bet"></use>
+              </svg>
+              <a class="menu__link" href="go">Live Betting</a>
+            </li>
+            <li class="menu__item">
+              <svg width="20" height="20" fill="#fff">
+                <use xlink:href="images/sprite.svg#virtual"></use>
+              </svg>
+              <a class="menu__link" href="go">Virtual sports</a>
+            </li>
+            <li class="menu__item">
+              <svg width="20" height="20" fill="#fff">
+                <use xlink:href="images/sprite.svg#colossus"></use>
+              </svg>
+              <a class="menu__link" href="go">Colossus</a>
+            </li>
+            <li class="menu__item">
+              <svg width="20" height="20" fill="#fff">
+                <use xlink:href="images/sprite.svg#cities"></use>
+              </svg>
+              <a class="menu__link" href="go">Cities</a>
+            </li>
+            <li class="menu__item">
+              <svg width="20" height="20" fill="#fff">
+                <use xlink:href="images/sprite.svg#crab"></use>
+              </svg>
+              <a class="menu__link" href="go">Bonus Crab</a>
+            </li>
+            <li class="menu__item">
+              <svg width="20" height="20" fill="#fff">
+                <use xlink:href="images/sprite.svg#rally"></use>
+              </svg>
+              <a class="menu__link" href="go">Spin Rally</a>
+            </li>
+            <li class="menu__item">
+              <svg width="20" height="20" fill="#fff">
+                <use xlink:href="images/sprite.svg#bonus"></use>
+              </svg>
+              <a class="menu__link" href="go">Promotions</a>
+            </li>
+            <li class="menu__item">
+              <svg width="20" height="20" fill="#fff">
+                <use xlink:href="images/sprite.svg#tournament"></use>
+              </svg>
+              <a class="menu__link" href="go">Tournaments</a>
+            </li>
+            <li class="menu__item">
+              <svg width="20" height="20" fill="#fff">
+                <use xlink:href="images/sprite.svg#weekly"></use>
+              </svg>
+              <a class="menu__link" href="go">Weekly Challenges</a>
+            </li>
+            <li class="menu__item">
+              <svg width="20" height="20" fill="#fff">
+                <use xlink:href="images/sprite.svg#achievements"></use>
+              </svg>
+              <a class="menu__link" href="go">Achievements</a>
+            </li>
+            <li class="menu__item">
+              <svg width="20" height="20" fill="#fff">
+                <use xlink:href="images/sprite.svg#vip"></use>
+              </svg>
+              <a class="menu__link" href="go">VIP Levels</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="logo" href="https://rtbet.com.de">
+          <img class="logo__img" src="images/logo-main.svg" alt="logo" width="129" height="38" loading="eager" />
+        </a>
+        <div class="btn-box header__btn-box">
+          <a class="btn__link btn__link-accent log-in" href="go">Register</a>
+          <a class="btn__link registration" href="go">Log in</a>
+        </div>
+      </div>
+    </header>
+    <section class="content">
+      <div class="main">
+        <div class="main__content">
+          <p class="main__text">Sport Bonus</p>
+          <p class="main__text-title">First Deposit Bonus 100% up to €100</p>
+          <a class="main__btn btn__link btn__link-accent" href="go"><span>Join Now</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="content">
+      <div class="container">
+        <div class="content__inner">
+          <h1>Spinanga Casino 🇭🇺</h1>
+          <p>
+            A Spinanga online kaszinó kiemelkedik a többi jól ismert platform közül egyedi ajánlatainak, érdekes kialakításának és
+            annak köszönhetően, hogy új lehetőségekkel kívánja fejleszteni és örvendeztetni a játékosokat. A Spinanga Casino a
+            saját fejlődési útját követi, érdekes bónuszokkal és promóciókkal ajándékozza meg a felhasználókat, valamint a
+            legmagasabb szintű szolgáltatást nyújtja.
+          </p>
+          <p>
+            A Spinanga lehetőséget ad a játékosoknak, hogy kiválaszthassák a nekik tetsző szórakozást, és kényelmesen és a
+            személyes adatok biztonságában bízva töltsék el az idejüket. A felülvizsgálatunkban sok hasznos információt talál a
+            kaszinóról és a főbb szempontokról, amelyek segítenek abban, hogy a játék folyamata még élvezetesebb és érdekesebb
+            legyen.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="content">
+      <div class="container">
+        <div class="content__inner">
+          <div class="popular__top">
+            <h2>Casino</h2>
+            <a class="more-games" href="go">See all</a>
+          </div>
+          <div class="popular">
+            <div class="popular__item">
+              <a class="popular__link" href="go">
+                <div class="popular__img">
+                  <img src="images/casinotop.webp" width="100%" height="100%" loading="lazy" alt="image" />
+                </div>
+                <span>top</span>
+              </a>
+            </div>
+            <div class="popular__item">
+              <a class="popular__link" href="go">
+                <div class="popular__img">
+                  <img src="images/casinonew.webp" width="100%" height="100%" loading="lazy" alt="image" />
+                </div>
+                <span>new</span>
+              </a>
+            </div>
+            <div class="popular__item">
+              <a class="popular__link" href="go">
+                <div class="popular__img">
+                  <img src="images/casinopopular.webp" width="100%" height="100%" loading="lazy" alt="image" />
+                </div>
+                <span>Popular</span>
+              </a>
+            </div>
+            <div class="popular__item">
+              <a class="popular__link" href="go">
+                <div class="popular__img">
+                  <img src="images/casinoexclusive.webp" width="100%" height="100%" loading="lazy" alt="image" />
+                </div>
+                <span>Exclusive</span>
+              </a>
+            </div>
+            <div class="popular__item">
+              <a class="popular__link" href="go">
+                <div class="popular__img">
+                  <img src="images/casinobonusbuys.webp" width="100%" height="100%" loading="lazy" alt="image" />
+                </div>
+                <span>Bonus Buys</span>
+              </a>
+            </div>
+            <div class="popular__item">
+              <a class="popular__link" href="go">
+                <div class="popular__img">
+                  <img src="images/casinolivegames.webp" width="100%" height="100%" loading="lazy" alt="image" />
+                </div>
+                <span>Live Games</span>
+              </a>
+            </div>
+            <div class="popular__item">
+              <a class="popular__link" href="go">
+                <div class="popular__img">
+                  <img src="images/casinoslots.webp" width="100%" height="100%" loading="lazy" alt="image" />
+                </div>
+                <span>Slots</span>
+              </a>
+            </div>
+            <div class="popular__item">
+              <a class="popular__link" href="go">
+                <div class="popular__img">
+                  <img src="images/casinomegaways.webp" width="100%" height="100%" loading="lazy" alt="image" />
+                </div>
+                <span>Megaways</span>
+              </a>
+            </div>
+            <div class="popular__item">
+              <a class="popular__link" href="go">
+                <div class="popular__img">
+                  <img src="images/casinotablegames.webp" width="100%" height="100%" loading="lazy" alt="image" />
+                </div>
+                <span>Table Games</span>
+              </a>
+            </div>
+            <div class="popular__item">
+              <a class="popular__link" href="go">
+                <div class="popular__img">
+                  <img src="images/casinoall.webp" width="100%" height="100%" loading="lazy" alt="image" />
+                </div>
+                <span>All Games</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Kaszinó interfész és regisztráció</h2>
+          <p>
+            A fiók létrehozása egyszerű - ez a folyamat szó szerint 5 percet vesz igénybe az Ön idejéből. A platform felülete
+            könnyen navigálható, lehetővé téve a játékosok számára, hogy gyorsan megtalálják a szükséges részeket, és néhány
+            kattintással információt kapjanak. Külön figyelmet érdemel a platform különböző eszközökhöz való
+            alkalmazkodóképessége, az oldal mobileszközökön és PC-n is ugyanúgy néz ki.
+          </p>
+          <p>
+            <b>A Spinanga Casino regisztrációs folyamata néhány egyszerű lépést tartalmaz:</b>
+          </p>
+          <ol>
+            <li>
+              A személyes fiók létrehozása a bejelentkezéssel és jelszóval kezdődik. Ez a tétel fontos a platformmal való további
+              interakcióhoz. A jelszónak erősnek kell lennie, hogy adatai védve legyenek.
+            </li>
+            <li>
+              A regisztráció második szakaszában meg kell adnia a szolgáltatásnak a személyes adatait: név, születési dátum és
+              elérhetőségek. Minden információt az ellenőrzési folyamat során használunk fel.
+            </li>
+            <li>Ezután meg kell adnia egy érvényes e-mail címet. Ezen kapja meg a regisztrációját megerősítő levelet.</li>
+            <li>Ellenőrzés: Ebben a szakaszban meg kell adnia a dokumentumok szkennelését vagy azok fényképét.</li>
+          </ol>
+          <p>
+            A Spinanga kaszinó felülete kellemes a szemnek. A Spinanga különösen büszke egyedi dizájnmegoldására és könnyű
+            navigációjára. Még egy újonnan a szerencsejátékok világában szórakozással foglalkozó újonc is gyorsan alkalmazkodik a
+            Spinanga virtuális terében.
+          </p>
+          <h2>Játékválaszték a Spinanga online kaszinóban</h2>
+          <p>
+            A Spinanga büszke a játékkönyvtárára, és igyekszik azt folyamatosan frissíteni újabb és újabb érdekes szórakozási
+            lehetőségekkel. A lenyűgöző grafika és a megbízhatóság garantált, mivel a kaszinó csak a legjobb szoftverfejlesztőkkel
+            és üzemeltetőkkel dolgozik együtt.
+          </p>
+          <p>
+            <b>A platform partnerei, mint játéküzemeltetők többek között a következők:</b>
+          </p>
+          <ul>
+            <li>
+              <b>NetEnt</b>
+              - egy jól ismert fejlesztő, amely számos nyerőgépet támogat, és páratlan grafikai minőséget biztosít számukra;
+            </li>
+            <li>
+              <b>Evolution Gaming</b>
+              - a szoftverpiac vezető fejlesztője, amely élő kaszinókhoz és valósághűen játszott játékokhoz kínál szoftvert;
+            </li>
+            <li>
+              <b>Microgaming</b>
+              - a nagyszabású portfóliójáról ismert szállító, beleértve a progresszív jackpotokat is;
+            </li>
+            <li>
+              <b>Play'n GO</b>
+              - egy ugyancsak híres vállalat, amely innovatív megközelítéssel egyedi és gyönyörű nyerőgépeket kínál a
+              felhasználóknak.
+            </li>
+          </ul>
+          <p><b>A kaszinó a következő játékterületeket kínálja a játékosoknak:</b></p>
+          <ol>
+            <li>
+              <b>Nyerőgépek.</b>
+              Ebbe a kategóriába tartoznak a nagyon népszerű játékok: videó nyerőgépek, klasszikus változatok, valamint
+              progresszív jackpotok.
+            </li>
+            <li>
+              <b>Élő kaszinó.</b>
+              Az élő formátum szokatlan játékokat tartalmaz: blackjack, rulett, baccarat és mások.
+            </li>
+            <li>
+              <b>Asztali szórakoztatás.</b>
+              Ez a formátum a klasszikus szórakozást kedvelők számára alkalmas. Itt különböző rulett, blackjack, baccarat és póker
+              típusokat talál.
+            </li>
+            <li>
+              <b>Különleges játékok.</b>
+              Itt nem szokványos ajánlatok várják Önt: különböző lottó, kenó, bingó és egyéb élvezetek azoknak, akik izgalomra
+              vágynak.
+            </li>
+          </ol>
+          <p>
+            A kaszinó rendszeresen feltölti játékgyűjteményét, újdonságokkal bővíti, és végtelenül izgalmas szórakozást nyújt
+            felhasználóinak.
+          </p>
+          <h2>Bónuszajánlatok és promóciók</h2>
+          <p>
+            A bónuszok egy hatékony eszköz, amely segít a kaszinónak új játékosokat vonzani és fenntartani az érdeklődésüket. A
+            Spinanga platformmal való interakció első pillanataitól kezdve a felhasználók üdvözlő bónusszal szembesülnek, amely
+            tartalmazhat ingyenes pörgetéseket népszerű nyerőgépeken vagy befizetés nélküli készpénzbónuszokat. Ez a kellemes
+            üdvözlés elbizonytalanítja a játékosokat, és lehetőséget ad nekik, hogy veszteségek és befektetések nélkül
+            belevethetik magukat a szerencsejátékok világába.
+          </p>
+          <p>
+            <b>A Spinanga a következő promóciókat és bónuszokat biztosítja a felhasználók számára folyamatosan:</b>
+          </p>
+          <ul>
+            <li>
+              <b>Heti bónuszok.</b>
+              Az ajándék alapok lehetővé teszik a játékosok számára, hogy kevesebb személyes pénzt költsenek és szórakozásból
+              játsszanak;
+            </li>
+            <li>
+              <b>Freespins az aktivitásért.</b>
+              Az aktív felhasználók különleges promóciók keretében ingyenes pörgetéseket kapnak, és kockázat nélkül kipróbálhatják
+              az új nyerőgépeket;
+            </li>
+            <li>
+              <b>VIP-bónuszok.</b>
+              Ez a fajta bónusz a legaktívabb játékosok számára érhető el. Ebben a kategóriában exkluzív bónuszok érhetőek el.
+            </li>
+          </ul>
+          <p>
+            A Spinanga Casino nagyra értékeli hírnevét, és gondosan ellenőrzi a fogadási feltételek átláthatóságát, és ellenőrzi a
+            folyamatot, hogy ne jelenjenek meg rejtett követelmények. Ez a megközelítés átláthatóvá teszi a folyamatot, és a
+            végeredmény kellemes.
+          </p>
+          <h2>Hűségprogram, szintek és feltételek</h2>
+          <p>
+            A Spinanga hűségprogramja kiváló példa arra, hogy a kaszinó mennyire értékeli a rendszeres felhasználóit, és igyekszik
+            jutalmazni őket az aktivitásukért. A pontgyűjtő rendszer lehetővé teszi a játékosok számára, hogy azokat valódi pénzre
+            váltsák, vagy a szórakozásért fizetőeszközként használják.
+          </p>
+
+          <p>
+            A program feltételei a lehető legátláthatóbbak és legvilágosabbak. Minden egyes megtett tét bizonyos számú pontot hoz
+            a játékosnak, amelyeket összeadnak és bónuszokra váltanak át.
+          </p>
+          <p><b>A hűségprogram a következő szinteket tartalmazza:</b></p>
+          <ol>
+            <li>
+              <b>Kezdeti.</b>
+              Ez a szint minden játékos számára megnyílik a regisztrációt követően. A felhasználók hozzáférhetnek az üdvözlő és
+              standard bónuszokhoz, valamint lehetőséget kapnak arra, hogy részt vegyenek az összes kaszinó promócióban.
+            </li>
+            <li>
+              <b>Haladó.</b>
+              A szint egy bizonyos számú pont összegyűjtése után nyílik meg. A játékosok hűségesebb feltételeket kapnak a pontok
+              beváltásához, megnövelt bónuszokat és hozzáférést a speciális promóciókhoz.
+            </li>
+            <li>
+              <b>VIP szint.</b>
+              Ez a szint csak az aktív felhasználók számára nyílik meg. A játékos egyedi bónuszok, gyors kiszolgálás, érdekes
+              eseményeken való részvétel, valamint a személyes menedzserrel való kommunikáció lehetősége formájában kapja meg a
+              lehetőségeket.
+            </li>
+          </ol>
+          <p>
+            A program lehetőségei folyamatosan bővülnek, és a feltételeket szerkesztik. Ez a megközelítés lehetővé teszi, hogy
+            nagy közönséget érjen el, és lehetőséget adjon nekik, hogy élvezzék a folyamatot.
+          </p>
+          <h2>Befizetési rendszer és kifizetési módszerek</h2>
+          <p>
+            A Spinanga Casino igyekszik biztonságos pénzforgalmi rendszert létrehozni, és a fizetési módok széles skáláját kínálja
+            játékosainak.
+          </p>
+          <p><b>Most a következő befizetési és kifizetési módszerek állnak rendelkezésre:</b></p>
+          <ul>
+            <li>Bankkártyák: MasterCard, Visa;</li>
+            <li>Banki átutalások;</li>
+            <li>E-pénztárcák: Skrill, WebMoney, Neteller;</li>
+            <li>Fizetési rendszerek: ecoPayz, Paysafecard;</li>
+            <li>Kriptovaluták: Bitcoin, USDT és mások.</li>
+          </ul>
+          <p>
+            A tranzakciókkal kapcsolatos további információk a Spinanga hivatalos weboldalán találhatók. A kaszinó biztosítja a
+            játékosokat, hogy fejlett technológiát használ az adatok titkosítására, és garanciát vállal arra, hogy ezt senki sem
+            tudja kihasználni.
+          </p>
+          <h2>Spinanga Casino engedélyezés</h2>
+          <p>
+            Az engedély garancia arra, hogy a kaszinó a törvényeknek megfelelően működik, és tiszteletben tartja a
+            szerencsejáték-iparág jogait és kötelezettségeit. A Spinanga színes, érdekes tartalmakkal és kiváló hírnévvel
+            rendelkező platformként jelent meg. A kaszinó a megalakulása óta mindig is magas színvonalú szabványoknak felelt meg
+            és törvényesen működött.
+          </p>
+          <p>
+            A Spinanga a Curaçao Szerencsejáték Bizottság engedélyével rendelkezik. Ez a pont azért fontos, mert a
+            szerencsejáték-felügyelet folyamatosan ellenőrzi és felügyeli a kaszinót. Bátran kijelenthetjük, hogy minden játék
+            biztonságos és tisztességes. Az engedélynek köszönhetően a Spinanga számos országban legálisan működhet, és továbbra
+            is minőségi tartalommal örvendeztetheti meg játékosait.
+          </p>
+          <h2>Ügyfélszolgálat</h2>
+          <p>
+            A kaszinó visszajelzései nagyon fontosak mind az ügyfél, mind a platform számára. A Spinanga ebből a szempontból is
+            magas színvonalú szolgáltatást nyújt. A hét bármely napján, a nap bármely szakában felveheti a kapcsolatot az
+            üzemeltetőkkel.
+          </p>
+          <p>
+            <b>A Spinangánál a következő visszajelzési módszerek állnak rendelkezésre:</b>
+          </p>
+          <ul>
+            <li>
+              <b>Online chat:</b>
+              közvetlenül a kaszinó weboldalán érhető el, és gyors választ garantál;
+            </li>
+            <li>
+              <b>E-mail:</b>
+              összetettebb, dokumentumok benyújtását igénylő kérdések esetén használható kapcsolattartási módszer;
+            </li>
+            <li>
+              <b>Telefon:</b>
+              egy támogatási módszer azok számára, akik az élő chatet részesítik előnyben.
+            </li>
+          </ul>
+          <p>A Gyakran Ismételt Kérdések menüpontban is megtalálhatja a válaszokat kérdéseire.</p>
+          <h2>Mobil kaszinó és alkalmazások</h2>
+          <p>
+            A Spinanga Casino lépést tart a korral, és arra törekszik, hogy játékosainak maximális kényelmet és funkcionalitást
+            biztosítson. Az oldal adaptív kialakítása lehetővé teszi, hogy az oldalakat bármilyen eszközről torzítás nélkül nézze
+            meg, és a legmagasabb minőségű grafikát biztosítja.
+          </p>
+          <p>
+            A Spinanga törődik a mobilalkalmazások rajongóival, és kifejezetten nekik fejlesztett a kaszinó alkalmazásokat Android
+            és iOS rendszerekre. Töltse le őket a kaszinó hivatalos weboldaláról, illetve az App Store-ból. A platform stabil
+            munkát biztosít az alkalmazásokkal és a fényes optimális grafikával.
+          </p>
+          <p>
+            A mobilalkalmazásokból a játékosok hozzáférhetnek az összes kulcsfontosságú funkcióhoz és a vezető szoftverfejlesztők
+            játékainak széles választékához. A Spinanga alkalmazások lehetővé teszik a felhasználók számára, hogy bárhol és
+            bármikor élvezhessék kedvenc játékaikat.
+          </p>
+          <h2>Biztonság és játékintegritás</h2>
+          <p>
+            A biztonság és az adatvédelem kulcsfontosságú tényező a játékélmény tisztességes voltának és a játékosok bizalmának
+            szempontjából. A platform maximális figyelmet fordít ezekre a kérdésekre.
+          </p>
+          <p><b>A játék biztonságát és tisztességességét biztosító módszerek:</b></p>
+          <ul>
+            <li>
+              <b>SSL-titkosítás:</b>
+              a kaszinó adatbázisába bevitt összes felhasználói adatot modern titkosítási technológiák segítségével védjük. Ennek
+              a megközelítésnek köszönhetően az adatszivárgás és a harmadik fél általi hozzáférés lehetősége megakadályozható;
+            </li>
+            <li>
+              <b>Bizonyított szoftverfejlesztők:</b>
+              a platform csak jól ismert és bevált szoftverfejlesztőkkel működik együtt, és hitelesített
+              véletlenszám-generátorokat használ. Ez segít a legmagasabb szintű elfogulatlan eredmények fenntartásában;
+            </li>
+            <li>
+              <b>Független ellenőrzések:</b>
+              a kaszinót rendszeresen ellenőrzik független ellenőrző szervezetek, így a tisztességes játék magas színvonalát
+              tartja fenn;
+            </li>
+            <li>
+              <b>Felelősségteljes játék:</b>
+              A Spinanga törődik ügyfeleivel, és minden eszközt biztosít a szerencsejáték-függőség ellenőrzéséhez és
+              megszüntetéséhez;
+            </li>
+            <li>
+              <b>Felhasználó-ellenőrzés:</b>
+              Az ellenőrzési politika megakadályozza a kiskorú felhasználók játékát, és minimalizálja a csalás kockázatát a
+              platformon.
+            </li>
+          </ul>
+          <p>
+            Ezekkel az eszközökkel a Spinanga biztosítja a személyes adatok magas szintű védelmét és garantálja a tranzakciók
+            átláthatóságát.
+          </p>
+          <h2>Felelős szerencsejáték</h2>
+          <p>
+            A Spinanga Casino felismeri az egészséges játékélmény biztosításának fontosságát, és minden rendelkezésre álló
+            lehetőséget biztosít játékosai számára a függőség elleni küzdelemhez. A platform különböző intézkedéseket hajt végre a
+            játékosok védelme és a negatív következmények minimalizálása érdekében.
+          </p>
+          <b>A felelős játék megvalósításának módjai a Spinanga kaszinónál:</b>
+          <ul>
+            <li>
+              <b>Befizetési limitek beállítása:</b>
+              a felhasználók saját maguk állíthatják be a befizetési limitet, így kontrollálva a túlzott költekezést;
+            </li>
+            <li>
+              <b>Önkizárás a játékból:</b>
+              a kaszinó lehetőséget biztosít arra, hogy a játékos egy időre vagy véglegesen kizárja magát a játékból;
+            </li>
+            <li>
+              <b>Időlimit-emlékeztetők:</b>
+              a felhasználók időlimiteket állíthatnak be, és rendszeres értesítéseket kapnak a játékban eltöltött időről;
+            </li>
+            <li>
+              <b>Szakmai segítséghez vezető linkek:</b>
+              A Spinanga minden szükséges információt megad a szerencsejáték-függőséggel kapcsolatban, valamint a
+              szerencsejáték-függőségben szenvedők segítésére szakosodott szervezetek elérhetőségeit.
+            </li>
+          </ul>
+          <p>
+            A Spinanga Casino törődik a felhasználók egészségével és lelki békéjével, és rendszeresen emlékezteti őket a felelős
+            szerencsejáték szabályaira.
+          </p>
+          <h2>Következtetés</h2>
+          <p>
+            A Spinanga Casino nem csak egy kaszinó, hanem egy ökoszisztéma és egy élő világ a virtuális valóságban. A kaszinó
+            bőkezű bónuszokat, rendszeres promóciókat és a legújabb játékokat kínálja játékosainak, amelyek sok más oldalon nem
+            érhetőek el. A Spinanga igyekszik minden olyan szempontot lefedni, ami a játékot egy érdekes, és ami a legfontosabb,
+            biztonságos utazássá teszi.
+          </p>
+          <p>
+            A fejlett szoftverüzemeltetőkkel való együttműködés lehetővé teszi, hogy a platform mindig a grafika és a
+            tartalomszolgáltatás minőségének csúcsán legyen.
+          </p>
+          <p>
+            A biztonság és a személyes adatok védelmének kérdése különös figyelmet kap a Spinangánál, amit a hatékony, modern
+            adattitkosítási technológiák és a szigorú adatvédelmi politika alkalmazása is megerősít. A kaszinó törődik a
+            felhasználók mentális egészségével, és tájékoztat a felelős játék szabályairól.
+          </p>
+          <p>
+            A Spinanga a szórakozás kis világa, amely mindenki számára elérhető. Élénk érzelmek, nagy nyeremények és
+            felejthetetlen élvezetek várnak itt rád.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <nav class="footer__nav">
+            <div class="footer__nav-item footer__nav-logo">
+              <img class="logo__img" src="images/logo-main.svg" alt="logo" width="152" height="30" />
+            </div>
+            <div class="footer__nav-item">
+              <ul class="footer__list">
+                <li class="footer__list-item"><a href="#">Promóciók</a></li>
+                <li class="footer__list-item"><a href="#">Rólunk</a></li>
+                <li class="footer__list-item"><a href="#">A BTC-ről</a></li>
+                <li class="footer__list-item"><a href="#">AML politika</a></li>
+                <li class="footer__list-item"><a href="#">Feltételek és feltételek</a></li>
+                <li class="footer__list-item"><a href="#">Kockázati figyelmeztetések</a></li>
+                <li class="footer__list-item"><a href="#">Adatvédelmi irányelvek</a></li>
+                <li class="footer__list-item"><a href="#">Sütikre vonatkozó irányelvek</a></li>
+                <li class="footer__list-item"><a href="#">Gyakran ismételt kérdések</a></li>
+              </ul>
+            </div>
+          </nav>
+          <p class="footer__text">
+            Gambling can be addictive. Play responsibly. RTbet.com only accepts customers over 18 years of age.
+          </p>
+          <p class="footer__text">2025 © RTbet.com All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
